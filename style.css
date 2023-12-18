@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 200px;
+}
+li{
+    list-style: none;  
+}
+li a{
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    color: rgb(213, 213, 213);
+    position: relative;
+}
+li a::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    background-color: rgb(0, 255, 225);
+    left: 0;
+    bottom: -4px;
+    transition: all .5s ease;
+}
+li a:hover{
+    color: rgb(255, 255, 255);
+}
+li a:hover::after{
+    width: 100%;
+}
